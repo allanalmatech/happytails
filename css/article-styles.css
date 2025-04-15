@@ -81,3 +81,17 @@ footer a:hover {
     color: var(--secondary);
     text-decoration: none;
 }
+/* Add this to your existing CSS */
+.pet-card .card-img-top {
+    width: 100%;
+    height: 250px; /* Default height that will be overridden by JS */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pet-card .card-img-top {
+        height: 200px;
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pet Articles - HappyTails</title>
+    <link rel="shortcut icon" href="img/pet.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4CAF50;     /* Warm green - represents growth and care */
+            --secondary: #FF9800;   /* Warm orange - represents energy and friendliness */
+            --accent: #8D6E63;      /* Warm brown - represents earth and comfort */
+            --light: #E8F5E9;      /* Light mint - soft background */
+            --dark: #2E7D32;       /* Dark green - for contrast */
+            --white: #FFFFFF;
+            --text: #37474F;       /* Blue-grey - for better readability */
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+        }
+
+        .navbar {
+            background-color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand, .navbar .nav-link {
+            color: var(--white) !important;
+            font-weight: 600;
+        }
+
+        .navbar .btn-outline-primary {
+            color: var(--white);
+            border-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .navbar .btn-outline-primary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        .navbar .btn-primary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .navbar .btn-primary:hover {
+            background-color: #F57C00;
+            border-color: #F57C00;
+        }
+
+        .article-card {
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-card .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .article-card .btn-primary:hover {
+            background-color: var(--dark);
+            border-color: var(--dark);
+        }
+
+        h1, h2, h3, .card-title {
+            color: var(--dark);
+        }
+
+        .card-text {
+            color: var(--text);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">HappyTails</a>
+        <a href="pet-articles.html" class="nav-link">Pet Articles</a>
+        <input type="text" class="form-control w-25 d-inline" placeholder="Search for a pet">
+        <a href="login.html" class="btn btn-outline-primary">Login</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+</nav>
+
+<!-- Page Title -->
+<div class="container text-center mt-4">
+    <h2>Pet Articles</h2>
+    <p>Learn about pet care, training tips, and adoption guides.</p>
+</div>
+
+<!-- Pet Articles Section -->
+<div class="container mt-4">
+    <div class="row">
+
+        <!-- Article 1 -->
+        <div class="col-md-4">
+            <div class="card article-card">
+                <img src="img/cat2.jpg" class="card-img-top" alt="Pet Care Guide">
+                <div class="card-body">
+                    <h5 class="card-title">The Ultimate Pet Care Guide</h5>
+                    <p class="card-text">Everything you need to know about taking care of your pet.</p>
+                    <a href="articles/pet-care-guide.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="col-md-4">
+            <div class="card article-card">
+                <img src="img/dog1.jpg" class="card-img-top" alt="Dog Training">
+                <div class="card-body">
+                    <h5 class="card-title">Dog Training Tips for Beginners</h5>
+                    <p class="card-text">Learn how to train your dog with these simple tips.</p>
+                    <a href="articles/dog-training-tips.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-md-4">
+            <div class="card article-card">
+                <img src="img/dog2.jpg" class="card-img-top" alt="Adoption Guide">
+                <div class="card-body">
+                    <h5 class="card-title">How to Adopt a Pet</h5>
+                    <p class="card-text">Step-by-step guide to adopting your new furry friend.</p>
+                    <a href="articles/adoption-guide.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center p-3 mt-5">
+    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="about.html">About Us</a> | 
+    <a href="contact.html">Contact Us</a> | 
+    &copy; 2025 HappyTails, Inc. All Rights Reserved
+</footer>
+
+</body>
+</html>

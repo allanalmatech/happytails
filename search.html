@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Results - HappyTails</title>
+    <link rel="shortcut icon" href="img/pet.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4CAF50;     /* Warm green - represents growth and care */
+            --secondary: #FF9800;   /* Warm orange - represents energy and friendliness */
+            --accent: #8D6E63;      /* Warm brown - represents earth and comfort */
+            --light: #E8F5E9;      /* Light mint - soft background */
+            --dark: #2E7D32;       /* Dark green - for contrast */
+            --white: #FFFFFF;
+            --text: #37474F;       /* Blue-grey - for better readability */
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+        }
+
+        .navbar {
+            background-color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand, .navbar .nav-link {
+            color: var(--white) !important;
+            font-weight: 600;
+        }
+
+        .navbar .btn-outline-primary {
+            color: var(--white);
+            border-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .navbar .btn-outline-primary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        .navbar .btn-primary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .navbar .btn-primary:hover {
+            background-color: #F57C00;
+            border-color: #F57C00;
+        }
+
+        .btn-dark {
+            background-color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-dark:hover {
+            background-color: #6D4C41;
+            border-color: #6D4C41;
+        }
+
+        .btn-outline-secondary {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        h1, h2, h3 {
+            color: var(--dark);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+        }
+
+        /* Search specific styles */
+        .search-results {
+            padding: 20px 0;
+        }
+
+        .card-title {
+            color: var(--dark);
+            margin-bottom: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">HappyTails</a>
+        <a href="pet-articles.html" class="nav-link">Pet Articles</a>
+
+        <!-- Search Bar Form -->
+        <form id="searchForm" class="d-inline w-25">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for a pet">
+        </form>
+
+        <a href="login.html" class="btn btn-outline-primary">Login</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+</nav>
+
+<!-- Category Navigation -->
+<div class="container text-center mt-3">
+    <button class="btn btn-dark">Adopt or Get Involved</button>
+    <button class="btn btn-outline-secondary">Dogs</button>
+    <button class="btn btn-outline-secondary">Cats</button>
+    <button class="btn btn-outline-secondary">Small Pets</button>
+    <button class="btn btn-outline-secondary">Big Pets</button>
+    <button class="btn btn-outline-secondary">Other Animals</button>
+</div>
+
+<!-- Search Results -->
+<div class="container mt-5 search-results">
+    <h2>Search Results</h2>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="img/dog2.jpg" class="card-img-top">
+                <div class="card-body"><h5 class="card-title">Joy</h5></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="img/cat2.jpg" class="card-img-top">
+                <div class="card-body"><h5 class="card-title">Ruff</h5></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center p-3 mt-5">
+    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="about.html">About Us</a> | 
+    <a href="contact.html">Contact Us</a> | 
+    &copy; 2025 HappyTails, Inc. All Rights Reserved
+</footer>
+
+<!-- JavaScript for Search Bar -->
+<script>
+    function redirectToSearch() {
+        window.location.href = "search.html";
+    }
+
+    // Trigger search on form submission (Enter key)
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        redirectToSearch();
+    });
+</script>
+
+</body>
+</html>

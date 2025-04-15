@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us - HappyTails</title>
+    <link rel="shortcut icon" href="img/pet.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4CAF50;     /* Warm green - represents growth and care */
+            --secondary: #FF9800;   /* Warm orange - represents energy and friendliness */
+            --accent: #8D6E63;      /* Warm brown - represents earth and comfort */
+            --light: #E8F5E9;      /* Light mint - soft background */
+            --dark: #2E7D32;       /* Dark green - for contrast */
+            --white: #FFFFFF;
+            --text: #37474F;       /* Blue-grey - for better readability */
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+        }
+
+        .navbar {
+            background-color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand, .navbar .nav-link {
+            color: var(--white) !important;
+            font-weight: 600;
+        }
+
+        .navbar .btn-outline-primary {
+            color: var(--white);
+            border-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .navbar .btn-outline-primary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        .navbar .btn-primary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .navbar .btn-primary:hover {
+            background-color: #F57C00;
+            border-color: #F57C00;
+        }
+
+        .btn-dark {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .btn-dark:hover {
+            background-color: #6D4C41;
+            border-color: #6D4C41;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-secondary {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .resize-image {
+            max-width: 100%;
+            height: auto;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        h2 {
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">HappyTails</a>
+        <a href="pet-articles.html" class="nav-link">Pet Articles</a>
+        <input type="text" class="form-control w-25 d-inline" placeholder="Search for a pet">
+        <a href="login.html" class="btn btn-outline-primary">Login</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+    </div>
+</nav>
+
+<!-- Category Navigation -->
+<div class="container text-center mt-3">
+    <button class="btn btn-dark">Adopt or Get Involved</button>
+    <button class="btn btn-outline-secondary">Dogs</button>
+    <button class="btn btn-outline-secondary">Cats</button>
+    <button class="btn btn-outline-secondary">Small Pets</button>
+    <button class="btn btn-outline-secondary">Big Pets</button>
+    <button class="btn btn-outline-secondary">Other Animals</button>
+</div>
+
+<!-- Contact Us Content -->
+<div class="container mt-5">
+    <h2>Contact Us</h2>
+    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img id="left-image" src="img/dog1.jpg" class="resize-image" alt="Contact Us">
+        </div>
+
+        <div class="col-md-8">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">First and Last Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">How Can We Help You?</label>
+                    <textarea class="form-control" rows="4"></textarea>
+                </div>
+                <button class="btn btn-dark w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center p-3 mt-5">
+    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="about.html">About Us</a> | 
+    <a href="contact.html">Contact Us</a> | 
+    &copy; 2025 HappyTails, Inc. All Rights Reserved
+</footer>
+
+</body>
+</html>
+

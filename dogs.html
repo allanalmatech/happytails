@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Us - HappyTails</title>
+    <title>Search Results - HappyTails</title>
     <link rel="shortcut icon" href="img/pet.webp" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -95,10 +95,16 @@
             border: none;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            margin-bottom: 20px;
         }
 
         .card:hover {
             transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
         }
 
         h1, h2, h3 {
@@ -110,61 +116,70 @@
             box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
         }
 
-        .resize-image {
-            max-width: 100%;
-            height: auto;
-            transition: all 0.3s ease;
+        /* Search specific styles */
+        .search-results {
+            padding: 20px 0;
+        }
+
+        .card-title {
+            color: var(--dark);
+            margin-bottom: 0;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">HappyTails</a>
-        <a href="pet-articles.html" class="nav-link">Pet Articles</a>
-        <input type="text" class="form-control w-25 d-inline" placeholder="Search for a pet">
-        <a href="login.html" class="btn btn-outline-primary">Login</a>
-        <a href="signup.html" class="btn btn-primary">Sign Up</a>
-    </div>
-</nav>
-
-<!-- Category Navigation -->
-<div class="container text-center mt-3">
-    <button class="btn btn-dark">Adopt or Get Involved</button>
-    <a href="dogs.html"><button class="btn btn-outline-secondary">Dogs</button></a>
-    <a href="cats.html"><button class="btn btn-outline-secondary">Cats</button></a>
-    <a href="bigpets.html"><button class="btn btn-outline-secondary">Big Pets</button></a>
-    <a href="smallpets.html"><button class="btn btn-outline-secondary">Small Pets</button></a>
-    <a href="allpets.html"><button class="btn btn-outline-secondary">All pets</button></a>
-</div>
-
-<!-- About Us Content -->
-<div class="container mt-5">
-    <h2>About Us</h2>
-    <p>At HappyTails, we believe that every pet deserves a loving and caring home. Our mission is to connect abandoned, rescued, or surrendered pets with compassionate families who can give them a second chance at happiness. Guided by our passion for animal welfare, we work tirelessly to create a future where every furry friend has a place to call home.     
-    <div class="row"> <div class="col-md-6">
-            <h3>Our Mission and Vision</h3>
-            <h5>A Safe Haven for Every Paw</h5>
-            <p>We are committed to rescuing pets in need and ensuring their health and wellbeing. Through a network of devoted volunteers and foster families, we provide temporary homes, medical care, and emotional support to animals before they find their forever families.
-
-Our vision is a world where shelters are empty because every pet has found a loving family.</p>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HappyTails</a>
+            <a href="pet-articles.html" class="nav-link">Pet Articles</a>
+    
+            <!-- Search Bar Form -->
+            <form id="searchForm" class="d-inline w-25">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search for a pet">
+            </form>
+    
+            <a href="login.html" class="btn btn-outline-primary">Login</a>
+            <a href="signup.html" class="btn btn-primary">Sign Up</a>
         </div>
-        <div class="col-md-6">
-            <img src="img/cat2.jpg" class="img-fluid border" alt="About Us">
-        </div>
+    </nav>
+
+    <div class="container mt-5 search-results">
+        <h2>Dogs</h2>
+    
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/dog2.jpg" class="card-img-top">
+                    <div class="card-body"><h5 class="card-title">Simba</h5></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/dog1.jpg" class="card-img-top">
+                    <div class="card-body"><h5 class="card-title">Scar</h5></div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Footer -->
-<footer class="text-center p-3 mt-5">
-    <a href="privacy.html">Privacy Policy</a> | 
-    <a href="about.html">About Us</a> | 
-    <a href="contact.html">Contact Us</a> | 
-    &copy; 2025 HappyTails, Inc. All Rights Reserved
-</footer>
+    <footer class="text-center p-3 mt-5">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="about.html">About Us</a> | 
+        <a href="contact.html">Contact Us</a> | 
+        &copy; 2025 HappyTails, Inc. All Rights Reserved
+    </footer>
 
+    <script>
+        function redirectToSearch() {
+            window.location.href = "search.html";
+        }
+    
+        // Trigger search on form submission (Enter key)
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            redirectToSearch();
+        });
+    </script>
 </body>
 </html>

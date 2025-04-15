@@ -129,73 +129,86 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HappyTails</a>
+            <a href="pet-articles.html" class="nav-link">Pet Articles</a>
+    
+            <!-- Search Bar Form -->
+            <form id="searchForm" class="d-inline w-25">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search for a pet">
+            </form>
+    
+            <a href="login.html" class="btn btn-outline-primary">Login</a>
+            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+    </nav>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">HappyTails</a>
-        <a href="pet-articles.html" class="nav-link">Pet Articles</a>
-
-        <!-- Search Bar Form -->
-        <form id="searchForm" class="d-inline w-25">
-            <input type="text" id="searchInput" class="form-control" placeholder="Search for a pet">
-        </form>
-
-        <a href="login.html" class="btn btn-outline-primary">Login</a>
-        <a href="signup.html" class="btn btn-primary">Sign Up</a>
-    </div>
-</nav>
-
-<!-- Category Navigation -->
-<div class="container text-center mt-3">
-    <button class="btn btn-dark">Adopt or Get Involved</button>
-    <a href="dogs.html"><button class="btn btn-outline-secondary">Dogs</button></a>
-    <a href="cats.html"><button class="btn btn-outline-secondary">Cats</button></a>
-    <a href="bigpets.html"><button class="btn btn-outline-secondary">Big Pets</button></a>
-    <a href="smallpets.html"><button class="btn btn-outline-secondary">Small Pets</button></a>
-    <a href="allpets.html"><button class="btn btn-outline-secondary">All pets</button></a>
-</div>
-
-<!-- Search Results -->
-<div class="container mt-5 search-results">
-    <h2>Search Results</h2>
-
-    <div class="row">
-        <div class="col-md-3">
-            <div class="card">
-                <img src="img/dog2.jpg" class="card-img-top">
-                <div class="card-body"><h5 class="card-title">Joy</h5></div>
+    <div class="container mt-5 search-results">
+        <h2>Big Pets</h2>
+    
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/horse1.jpg" class="card-img-top">
+                    <div class="card-body"><h5 class="card-title">Stallion</h5></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/horse2.jpg" class="card-img-top">
+                    <div class="card-body"><h5 class="card-title">Mare</h5></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="img/cat1.png" class="card-img-top">
+                        <div class="card-body"><h5 class="card-title">meow</h5></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="img/cat2.jpg" class="card-img-top">
+                        <div class="card-body"><h5 class="card-title">cheetah</h5></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="img/dog1.jpg" class="card-img-top">
+                        <div class="card-body"><h5 class="card-title">simba</h5></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="img/dog2.jpg" class="card-img-top">
+                        <div class="card-body"><h5 class="card-title">Scar</h5></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img src="img/cat2.jpg" class="card-img-top">
-                <div class="card-body"><h5 class="card-title">Ruff</h5></div>
-            </div>
-        </div>
+
     </div>
-</div>
 
-<!-- Footer -->
-<footer class="text-center p-3 mt-5">
-    <a href="privacy.html">Privacy Policy</a> | 
-    <a href="about.html">About Us</a> | 
-    <a href="contact.html">Contact Us</a> | 
-    &copy; 2025 HappyTails, Inc. All Rights Reserved
-</footer>
+    <footer class="text-center p-3 mt-5">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="about.html">About Us</a> | 
+        <a href="contact.html">Contact Us</a> | 
+        &copy; 2025 HappyTails, Inc. All Rights Reserved
+    </footer>
 
-<!-- JavaScript for Search Bar -->
-<script>
-    function redirectToSearch() {
-        window.location.href = "search.html";
-    }
-
-    // Trigger search on form submission (Enter key)
-    document.getElementById("searchForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-        redirectToSearch();
-    });
-</script>
-
+    <script>
+        function redirectToSearch() {
+            window.location.href = "search.html";
+        }
+    
+        // Trigger search on form submission (Enter key)
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            redirectToSearch();
+        });
+    </script>
 </body>
 </html>
